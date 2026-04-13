@@ -1,0 +1,14 @@
+{
+  "name": "genshin-guia",
+  "version": "1.0.0",
+  "description": "Guia interativo de Genshin Impact para iniciantes",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Yasmin Antunes",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.0.0"
+  }
+}

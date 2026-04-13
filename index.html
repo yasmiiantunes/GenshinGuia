@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Genshin Impact — Guia Iniciante</title>
+<link rel="stylesheet" href="styles/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Nunito:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+ 
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <span class="hero-icon">✦</span>
+  <h1>Genshin Impact</h1>
+  <p>Guia interativo para iniciantes — aprenda o básico e comece sua aventura em Teyvat</p>
+</div>
+
+<!-- Tabs -->
+<div class="tabs-wrap">
+  <nav class="tabs">
+    <button class="tab-btn active" onclick="goTab(0)" id="tab0">
+      <span class="tab-icon">🗺️</span> Início
+    </button>
+    <button class="tab-btn" onclick="goTab(1)" id="tab1">
+      <span class="tab-icon">⚔️</span> Controles
+    </button>
+    <button class="tab-btn" onclick="goTab(2)" id="tab2">
+      <span class="tab-icon">🌊</span> Elementos
+    </button>
+    <button class="tab-btn" onclick="goTab(3)" id="tab3">
+      <span class="tab-icon">👥</span> Equipe
+    </button>
+    <button class="tab-btn" onclick="goTab(4)" id="tab4">
+      <span class="tab-icon">📋</span> Quiz
+    </button>
+  </nav>
+</div>
+
+<!-- ===== SECTION 0: INÍCIO ===== -->
+<section class="section active" id="sec0">
+
+  <div class="progress-bar"><div class="progress-fill" style="width: 20%"></div></div>
+  <p class="progress-label">Seção 1 de 5</p>
+
+  <br>
+  <div class="sec-title">O que é Genshin Impact?</div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon" style="background: var(--sky-light);">🌍</div>
+      <div>
+        <div class="card-title">Mundo aberto de fantasia</div>
+        <div class="card-subtitle">Gratuito para jogar — PC, Mobile, PlayStation</div>
+      </div>
+    </div>
+    <p>Genshin Impact é um RPG de ação com mundo aberto desenvolvido pela HoYoverse. Você é o <strong>Viajante</strong>, um ser de outro mundo separado de seu irmão/irmã, explorando o continente de <strong>Teyvat</strong> em busca de respostas.</p>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-icon" style="background: var(--amber-light); margin-bottom: 0.5rem;">⚗️</div>
+      <div class="card-title">Gacha System</div>
+      <p style="margin-top: 0.4rem;">Personagens e armas são obtidos via Wishes (desejos). É possível jogar com personagens gratuitos tranquilamente.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon" style="background: var(--sage-light); margin-bottom: 0.5rem;">🌐</div>
+      <div class="card-title">7 Nações</div>
+      <p style="margin-top: 0.4rem;">Cada nação tem seu próprio elemento, cultura e história. A aventura começa em Mondstadt, terra do vento.</p>
+    </div>
+  </div>
+
+  <div class="sec-title">Como começar</div>
+  <ul class="step-list">
+    <li class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h3>Crie uma conta HoYoverse</h3>
+        <p>Acesse genshin.hoyoverse.com e crie sua conta gratuita. O jogo está disponível em português do Brasil.</p>
+      </div>
+    </li>
+    <li class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h3>Escolha seu Viajante</h3>
+        <p>No início você escolhe entre Aether (masculino) ou Lumine (feminino). Só diferença visual — jogabilidade idêntica.</p>
+      </div>
+    </li>
+    <li class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h3>Siga as missões principais</h3>
+        <p>As Archon Quests guiam a história. Siga-as para desbloquear regiões, personagens e mecânicas importantes.</p>
+      </div>
+    </li>
+    <li class="step-item">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h3>Explore e colete</h3>
+        <p>Colete Oculi (pequenas relíquias) espalhadas pelo mundo, abra baús e desbloqueie waypoints de teleporte.</p>
+      </div>
+    </li>
+  </ul>
+
+  <div class="sec-nav">
+    <span></span>
+    <button class="nav-btn primary" onclick="goTab(1)">Próximo: Controles →</button>
+  </div>
+</section>
+
+<!-- ===== SECTION 1: CONTROLES ===== -->
+<section class="section" id="sec1">
+
+  <div class="progress-bar"><div class="progress-fill" style="width: 40%"></div></div>
+  <p class="progress-label">Seção 2 de 5</p>
+  <br>
+
+  <div class="sec-title">Controles (PC)</div>
+
+  <div class="card" style="padding: 0.75rem 1.5rem;">
+    <div class="control-row">
+      <div class="key-chip">WASD</div>
+      <span class="control-desc">Mover o personagem</span>
+    </div>
+    <div class="control-row">
+      <div class="key-chip">Espaço</div>
+      <span class="control-desc">Pular / subir enquanto escala</span>
+    </div>
+    <div class="control-row">
+      <div class="key-chip">Shift</div>
+      <span class="control-desc">Correr (consome stamina)</span>
+    </div>
+    <div class="control-row">
+      <div class="key-chip">LMB</div>
+      <span class="control-desc">Ataque normal</span>
+    </div>
+    <div class="control-row">
+      <div class="key-chip">LMB ↓</div>
+      <span class="control-desc">Ataque carregado (segurar)</span>
+    </div>
+    <div class="control-row">
+      <div class="key-chip">E</div>
+      <span class="control-desc">Habilidade elemental (Skill)</span>
+    </div>
+    <div class="control-row">
+      <div class="key-chip">Q</div>
+      <span class="control-desc">Burst elemental (ultimate)</span>
+    </div>
+    <div class="control-row">
+      <div class="key-chip">1–4</div>
+      <span class="control-desc">Trocar de personagem na equipe</span>
+    </div>
+    <div class="control-row">
+      <div class="key-chip">M</div>
+      <span class="control-desc">Abrir o mapa</span>
+    </div>
+    <div class="control-row">
+      <div class="key-chip">F</div>
+      <span class="control-desc">Interagir / coletar itens</span>
+    </div>
+  </div>
+
+  <div class="sec-title">Mobile / Gamepad</div>
+
+  <div class="tip">
+    <span class="tip-icon">📱</span>
+    <div>No <strong>celular</strong>, os botões ficam na tela com a habilidade E na direita e o burst Q no canto inferior direito. O joystick virtual controla o movimento.</div>
+  </div>
+  <div class="tip">
+    <span class="tip-icon">🎮</span>
+    <div>Com <strong>controle</strong>, o botão R2/RT usa a skill elemental e L2/LT usa o burst. Troque personagens com D-pad.</div>
+  </div>
+
+  <div class="sec-title">Stamina — Barra de Resistência</div>
+  <div class="card">
+    <p>Correr, escalar, nadar e ataques carregados consomem stamina (barra laranja). Ela se recupera automaticamente quando você para. Não deixe zerar escalando — você cai! A stamina máxima aumenta coletando <strong>Anemoculi</strong>, <strong>Geoculi</strong> etc. e oferecendo aos Statues of The Seven.</p>
+  </div>
+
+  <div class="sec-nav">
+    <button class="nav-btn" onclick="goTab(0)">← Voltar</button>
+    <button class="nav-btn primary" onclick="goTab(2)">Próximo: Elementos →</button>
+  </div>
+</section>
+
+<!-- ===== SECTION 2: ELEMENTOS ===== -->
+<section class="section" id="sec2">
+
+  <div class="progress-bar"><div class="progress-fill" style="width: 60%"></div></div>
+  <p class="progress-label">Seção 3 de 5</p>
+  <br>
+
+  <div class="sec-title">Os 7 Elementos</div>
+  <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1.25rem;">Clique em um elemento para ver as reações que ele causa:</p>
+
+  <div class="element-grid">
+    <div class="element-badge el-anemo" onclick="showReaction('anemo', this)">
+      <span class="el-icon">🌀</span>
+      <span class="el-name">Anemo</span>
+      <span class="el-desc">Vento</span>
+    </div>
+    <div class="element-badge el-geo" onclick="showReaction('geo', this)">
+      <span class="el-icon">🪨</span>
+      <span class="el-name">Geo</span>
+      <span class="el-desc">Terra</span>
+    </div>
+    <div class="element-badge el-electro" onclick="showReaction('electro', this)">
+      <span class="el-icon">⚡</span>
+      <span class="el-name">Electro</span>
+      <span class="el-desc">Raio</span>
+    </div>
+    <div class="element-badge el-hydro" onclick="showReaction('hydro', this)">
+      <span class="el-icon">💧</span>
+      <span class="el-name">Hydro</span>
+      <span class="el-desc">Água</span>
+    </div>
+    <div class="element-badge el-pyro" onclick="showReaction('pyro', this)">
+      <span class="el-icon">🔥</span>
+      <span class="el-name">Pyro</span>
+      <span class="el-desc">Fogo</span>
+    </div>
+    <div class="element-badge el-cryo" onclick="showReaction('cryo', this)">
+      <span class="el-icon">❄️</span>
+      <span class="el-name">Cryo</span>
+      <span class="el-desc">Gelo</span>
+    </div>
+    <div class="element-badge el-dendro" onclick="showReaction('dendro', this)">
+      <span class="el-icon">🌿</span>
+      <span class="el-name">Dendro</span>
+      <span class="el-desc">Natureza</span>
+    </div>
+  </div>
+
+  <div class="reaction-info" id="reactionInfo">
+    <span class="r-emoji">👆</span>
+    <p>Selecione um elemento acima para ver as reações elementais que ele participa.</p>
+  </div>
+
+  <br>
+  <div class="sec-title">Por que as reações importam?</div>
+  <div class="card">
+    <p>Combinar dois elementos em um inimigo cria uma <strong>Reação Elemental</strong> que causa dano extra ou efeitos especiais. Montar uma equipe que cria boas reações é a chave do combate avançado. Por exemplo: molhar o inimigo com Hydro e depois congelar com Cryo (<strong>Frozen</strong>), ou inflamar com Pyro (<strong>Vaporize</strong>) para dano massivo.</p>
+  </div>
+
+  <div class="tip good">
+    <span class="tip-icon">✅</span>
+    <div>Iniciantes: foque em <strong>Vaporize</strong> (Hydro + Pyro) e <strong>Superconduct</strong> (Cryo + Electro). São fáceis de usar e muito poderosas.</div>
+  </div>
+
+  <div class="sec-nav">
+    <button class="nav-btn" onclick="goTab(1)">← Voltar</button>
+    <button class="nav-btn primary" onclick="goTab(3)">Próximo: Equipe →</button>
+  </div>
+</section>
+
+<!-- ===== SECTION 3: EQUIPE ===== -->
+<section class="section" id="sec3">
+
+  <div class="progress-bar"><div class="progress-fill" style="width: 80%"></div></div>
+  <p class="progress-label">Seção 4 de 5</p>
+  <br>
+
+  <div class="sec-title">Montando sua equipe</div>
+
+  <div class="card">
+    <p>Você leva <strong>4 personagens</strong> por time. Cada um tem papel diferente em combate. Trocar entre eles rapidamente é essencial para encadear reações e skills.</p>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-icon" style="background: #fde8d8;">⚔️</div>
+      <div class="card-title" style="margin-top: 0.5rem;">DPS Principal</div>
+      <p style="margin-top: 0.4rem;">Fica em campo a maior parte do tempo. Causa o dano principal. Ex: Hu Tao, Raiden, Neuvillette.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon" style="background: var(--sky-light);">💫</div>
+      <div class="card-title" style="margin-top: 0.5rem;">Sub-DPS</div>
+      <p style="margin-top: 0.4rem;">Entra rapidamente, usa skill/burst e sai. Mantém elementos no campo. Ex: Xingqiu, Fischl.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon" style="background: var(--sage-light);">🛡️</div>
+      <div class="card-title" style="margin-top: 0.5rem;">Support / Healer</div>
+      <p style="margin-top: 0.4rem;">Cura e protege o time. Essencial para sobreviver. Ex: Bennett, Barbara, Kokomi.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon" style="background: var(--violet-light);">🌪️</div>
+      <div class="card-title" style="margin-top: 0.5rem;">Buffer / Anemo</div>
+      <p style="margin-top: 0.4rem;">Espalha elementos e aumenta o dano do time. Ex: Kazuha, Venti, Sucrose (fáceis de conseguir).</p>
+    </div>
+  </div>
+
+  <div class="sec-title">Dicas de progressão</div>
+
+  <div class="tip good">
+    <span class="tip-icon">⭐</span>
+    <div><strong>Nível de mundo (AR)</strong>: Conforme sua Adventure Rank sobe, os inimigos ficam mais fortes mas dropam melhores itens. Não corra — fortaleça seus personagens primeiro.</div>
+  </div>
+
+  <div class="tip">
+    <span class="tip-icon">💎</span>
+    <div><strong>Primogems</strong>: A moeda premium. Salve-as para puxar personagens que você realmente quer. Não gaste nos standard banners no início.</div>
+  </div>
+
+  <div class="tip warn">
+    <span class="tip-icon">⚠️</span>
+    <div><strong>Resina</strong>: Energia limitada para farmar masmorras. Use diariamente — não desperdice e não deixe cheia.</div>
+  </div>
+
+  <div class="tip">
+    <span class="tip-icon">📅</span>
+    <div><strong>Login diário</strong>: Ative o Check-in mensal no HoYoLAB (app separado) para ganhar Primogems grátis todo dia.</div>
+  </div>
+
+  <div class="sec-nav">
+    <button class="nav-btn" onclick="goTab(2)">← Voltar</button>
+    <button class="nav-btn primary" onclick="goTab(4)">Próximo: Quiz →</button>
+  </div>
+</section>
+
+<!-- ===== SECTION 4: QUIZ ===== -->
+<section class="section" id="sec4">
+
+  <div class="progress-bar"><div class="progress-fill" style="width: 100%"></div></div>
+  <p class="progress-label">Seção 5 de 5 — Teste seu conhecimento</p>
+  <br>
+
+  <div class="sec-title">Quiz Rápido</div>
+
+  <!-- Q1 -->
+  <div class="quiz-card" id="q1">
+    <p class="quiz-q">1. Qual tecla ativa o Burst Elemental (ultimate) no PC?</p>
+    <div class="quiz-options">
+      <button class="quiz-opt" onclick="answer(this,'q1',false)">E</button>
+      <button class="quiz-opt" onclick="answer(this,'q1',true)">Q</button>
+      <button class="quiz-opt" onclick="answer(this,'q1',false)">R</button>
+      <button class="quiz-opt" onclick="answer(this,'q1',false)">F</button>
+    </div>
+    <p class="quiz-feedback" id="fb1">✅ Correto! <strong>Q</strong> ativa o Burst Elemental. <strong>E</strong> é a Skill elemental.</p>
+  </div>
+
+  <!-- Q2 -->
+  <div class="quiz-card" id="q2">
+    <p class="quiz-q">2. Qual reação elemental é criada combinando Hydro + Pyro?</p>
+    <div class="quiz-options">
+      <button class="quiz-opt" onclick="answer(this,'q2',false)">Frozen</button>
+      <button class="quiz-opt" onclick="answer(this,'q2',false)">Superconduct</button>
+      <button class="quiz-opt" onclick="answer(this,'q2',true)">Vaporize</button>
+      <button class="quiz-opt" onclick="answer(this,'q2',false)">Bloom</button>
+    </div>
+    <p class="quiz-feedback" id="fb2">✅ Correto! <strong>Vaporize</strong> = Hydro + Pyro. É uma das reações com maior dano no jogo.</p>
+  </div>
+
+  <!-- Q3 -->
+  <div class="quiz-card" id="q3">
+    <p class="quiz-q">3. Quantos personagens você pode levar por equipe?</p>
+    <div class="quiz-options">
+      <button class="quiz-opt" onclick="answer(this,'q3',false)">3</button>
+      <button class="quiz-opt" onclick="answer(this,'q3',true)">4</button>
+      <button class="quiz-opt" onclick="answer(this,'q3',false)">5</button>
+      <button class="quiz-opt" onclick="answer(this,'q3',false)">6</button>
+    </div>
+    <p class="quiz-feedback" id="fb3">✅ Correto! Cada equipe tem <strong>4 personagens</strong>. Trocar entre eles rapidamente é essencial no combate.</p>
+  </div>
+
+  <!-- Q4 -->
+  <div class="quiz-card" id="q4">
+    <p class="quiz-q">4. O que você deve fazer com sua Resina diariamente?</p>
+    <div class="quiz-options">
+      <button class="quiz-opt" onclick="answer(this,'q4',false)">Guardar para a próxima semana</button>
+      <button class="quiz-opt" onclick="answer(this,'q4',true)">Usar todos os dias — não deixar encher</button>
+      <button class="quiz-opt" onclick="answer(this,'q4',false)">Converter em Primogems</button>
+      <button class="quiz-opt" onclick="answer(this,'q4',false)">Ignorar — não é importante</button>
+    </div>
+    <p class="quiz-feedback" id="fb4">✅ Correto! A Resina tem limite e para de regenerar quando cheia. Use diariamente para farmar materiais.</p>
+  </div>
+
+  <div id="quizResult" style="display:none;" class="card" style="text-align:center;">
+    <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎉</div>
+    <div class="card-title" style="text-align:center; margin-bottom: 0.5rem;">Parabéns, Viajante!</div>
+    <p>Você completou o guia básico. Agora é só entrar em Teyvat e explorar! Bom jogo.</p>
+  </div>
+
+  <div class="sec-nav">
+    <button class="nav-btn" onclick="goTab(3)">← Voltar</button>
+    <button class="nav-btn primary" onclick="goTab(0)">Recomeçar do início</button>
+  </div>
+</section>
+<script src="scripts/main.js"></script>
+</body>
+</html>
