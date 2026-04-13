@@ -4,11 +4,11 @@
   "description": "Guia interativo de Genshin Impact para iniciantes",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "npx jest"
   },
   "author": "Yasmin Antunes",
   "license": "MIT",
   "devDependencies": {
-    "jest": "^29.0.0"
+    "jest": "^29.7.0"
   }
 }
