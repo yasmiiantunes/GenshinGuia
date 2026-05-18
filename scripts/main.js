@@ -1,4 +1,29 @@
-const { responderPergunta, terminouQuiz } = require('./quizlogic');
+let responderPergunta;
+let terminouQuiz;
+
+// =========================
+// IMPORTAÇÃO PARA TESTES (NODE/JEST)
+// =========================
+
+if (typeof require !== 'undefined') {
+
+  const quizLogic = require('./quizlogic');
+
+  responderPergunta = quizLogic.responderPergunta;
+  terminouQuiz = quizLogic.terminouQuiz;
+
+}
+
+// =========================
+// IMPORTAÇÃO PARA NAVEGADOR
+// =========================
+
+if (typeof window !== 'undefined') {
+
+  responderPergunta = window.responderPergunta;
+  terminouQuiz = window.terminouQuiz;
+
+}
 
 let currentTab = 0;
 const totalTabs = 5;
@@ -154,6 +179,11 @@ function answer(btn, qid, correct) {
 
 async function loadCharacter() {
 
+  const card =
+    document.getElementById("characterCard");
+
+  if (!card) return;
+
   const characters = [
     "diluc",
     "venti",
@@ -170,66 +200,53 @@ async function loadCharacter() {
 
   try {
 
+    card.innerHTML = `
+      <p>Carregando personagem...</p>
+    `;
+
     const response = await fetch(
       `https://genshin.dev/characters/${random}`
     );
 
+    if (!response.ok) {
+      throw new Error('Erro na API');
+    }
+
     const data = await response.json();
 
-    // evita erro nos testes
-    if (typeof document !== 'undefined') {
+    card.innerHTML = `
+      <h3>${data.name}</h3>
 
-      const card =
-        document.getElementById("characterCard");
+      <p>
+        <strong>Elemento:</strong>
+        ${data.vision}
+      </p>
 
-      if (card) {
+      <p>
+        <strong>Arma:</strong>
+        ${data.weapon}
+      </p>
 
-        card.innerHTML = `
-          <h3>${data.name}</h3>
+      <p>
+        <strong>Nação:</strong>
+        ${data.nation}
+      </p>
 
-          <p>
-            <strong>Elemento:</strong>
-            ${data.vision}
-          </p>
-
-          <p>
-            <strong>Arma:</strong>
-            ${data.weapon}
-          </p>
-
-          <p>
-            <strong>Nação:</strong>
-            ${data.nation}
-          </p>
-
-          <img
-            src="https://genshin.dev/characters/${random}/icon"
-            width="120"
-          >
-        `;
-
-      }
-
-    }
+      <img
+        src="https://genshin.dev/characters/${random}/icon"
+        width="120"
+      >
+    `;
 
     return data;
 
   } catch (error) {
 
-    if (typeof document !== 'undefined') {
+    console.error(error);
 
-      const card =
-        document.getElementById("characterCard");
-
-      if (card) {
-
-        card.innerHTML = `
-          <p>Erro ao carregar personagem.</p>
-        `;
-
-      }
-
-    }
+    card.innerHTML = `
+      <p>Erro ao carregar personagem.</p>
+    `;
 
     return null;
 
@@ -256,9 +273,13 @@ if (typeof window !== 'undefined') {
 // EXPORTS PARA TESTES
 // =========================
 
-module.exports = {
-  goTab,
-  showReaction,
-  answer,
-  loadCharacter
-};
+if (typeof module !== 'undefined') {
+
+  module.exports = {
+    goTab,
+    showReaction,
+    answer,
+    loadCharacter
+  };
+
+}
