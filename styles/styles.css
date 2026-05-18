@@ -416,3 +416,11 @@
   .nav-btn:hover { border-color: var(--gold); color: var(--gold-dark); background: var(--gold-light); }
   .nav-btn.primary { background: var(--gold-light); border-color: var(--gold); color: var(--gold-dark); }
   .nav-btn.primary:hover { background: var(--gold); color: #fff; }
+  #characterCard img {
+  margin-top: 1rem;
+  border-radius: 12px;
+}
+
+#characterCard h3 {
+  margin-bottom: 0.5rem;
+}
